@@ -1,16 +1,15 @@
 import 'dart:io';
-  void printString(String s, {int? n, bool? newLine}) {
-  if (n == null) {
-    n = 1;
-  }
+
+void printString(String s, {int n = 1, bool newLine = false}) {
   for (int i = 0; i < n; i++) {
-    if (newLine == null) {
+    if (newLine) {
       stdout.write('${i + 1}. $s\t');
     } else {
       stdout.writeln('${i + 1}. $s');
     }
   }
 }
+
 void main(List<String> args) {
   print('Satu argumen');
   printString('Dart');
@@ -24,4 +23,3 @@ void main(List<String> args) {
   print('\nTiga argumen');
   printString('Dart', n: 3, newLine: true);
 }
-
