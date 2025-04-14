@@ -1,0 +1,6 @@
+import 'character.dart';
+import 'monster.dart';
+
+class MonsterKecoa extends Monster {
+  String fly() => 'Syuuung...';
+}
